@@ -1,0 +1,56 @@
+﻿<Window x:Class="Calculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Calculator"
+        mc:Ignorable="d"
+        Title="Calculator" Height="541" Width="649" Background="#FF343434">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="75*"/>
+            <ColumnDefinition Width="75*"/>
+            <ColumnDefinition Width="75*"/>
+            <ColumnDefinition Width="75*"/>
+            <ColumnDefinition Width="75*"/>
+            <ColumnDefinition Width="75*"/>
+            <ColumnDefinition Width="75*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="75*"/>
+            <RowDefinition Height="75*"/>
+            <RowDefinition Height="75*"/>
+            <RowDefinition Height="75*"/>
+            <RowDefinition Height="75*"/>
+            <RowDefinition Height="75*"/>
+        </Grid.RowDefinitions>
+        <Button x:Name="btn_0" Content="0" Margin="5" FontSize="20" Background="#FF4F4F4F" Foreground="White" Click="Btn_0_Click" Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="2"/>
+        <Button x:Name="btn_1" Content="1" Margin="5" FontSize="20" Background="#FF4F4F4F" Foreground="White" Click="Btn_1_Click" Grid.Row="4" Grid.Column="2"/>
+        <Button x:Name="btn_2" Content="2" Margin="5" FontSize="20" Background="#FF4F4F4F" Foreground="White" Click="Btn_2_Click" Grid.Row="4" Grid.Column="3"/>
+        <Button x:Name="btn_3" Content="3" Margin="5" FontSize="20" Background="#FF4F4F4F" Foreground="White" Click="Btn_3_Click" Grid.Row="4" Grid.Column="4"/>
+        <Button x:Name="btn_4" Content="4" Margin="5" FontSize="20" Background="#FF4F4F4F" Foreground="White" Click="Btn_4_Click" Grid.Row="3" Grid.Column="2"/>
+        <Button x:Name="btn_5" Content="5" Margin="5" FontSize="20" Background="#FF4F4F4F" Foreground="White" Click="Btn_5_Click" Grid.Row="3" Grid.Column="3"/>
+        <Button x:Name="btn_6" Content="6" Margin="5" FontSize="20" Background="#FF4F4F4F" Foreground="White" Click="Btn_6_Click" Grid.Row="3" Grid.Column="4"/>
+        <Button x:Name="btn_7" Content="7" Margin="5" FontSize="20" Background="#FF4F4F4F" Foreground="White" Click="Btn_7_Click" Grid.Row="2" Grid.Column="2"/>
+        <Button x:Name="btn_8" Content="8" Margin="5" FontSize="20" Background="#FF4F4F4F" Foreground="White" Click="Btn_8_Click" Grid.Row="2" Grid.Column="3"/>
+        <Button x:Name="btn_9" Content="9" Margin="5" FontSize="20" Background="#FF4F4F4F" Foreground="White" Click="Btn_9_Click" Grid.Row="2" Grid.Column="4"/>
+        <Button x:Name="btn_PERIOD" Content="." Margin="5" FontSize="20" Background="#FF4F4F4F" Foreground="White" Click="Btn_PERIOD_Click" Grid.Row="5" Grid.Column="4"/>
+        <Button x:Name="btn_Equals" Content="=" Margin="5" FontSize="20" Background="#FF4F4F4F" Foreground="White" Click="Btn_Equals_Click" Grid.Row="4" Grid.Column="6" Grid.RowSpan="2"/>
+        <Button x:Name="btn_C" Content="C" Margin="5" FontSize="20" Background="#FF4F4F4F" Foreground="White" Click="Btn_C_Click" Grid.Row="3" Grid.Column="6"/>
+        <Button x:Name="btn_CE" Content="CE" Margin="5" FontSize="20" Background="#FF4F4F4F" Foreground="White" Click="Btn_CE_Click" Grid.Row="2" Grid.Column="6"/>
+        <TextBlock x:Name="output_numbers" Margin="5" TextWrapping="Wrap" TextAlignment="Right" FontSize="36" Foreground="White" Grid.Row="1" Grid.ColumnSpan="7" Text="test" FontWeight="Bold"/>
+        <TextBlock x:Name="output_numbers_prev" Margin="5" TextWrapping="Wrap" TextAlignment="Right" FontSize="20" Foreground="White" Grid.ColumnSpan="7"/>
+        <Button x:Name="btn_plus" Content="+" Margin="5" FontSize="20" Background="#FF4F4F4F" Foreground="White" Click="Btn_plus_Click" Grid.Row="4" Grid.Column="5"/>
+        <Button x:Name="btn_multiple" Content="*" Margin="5" FontSize="20" Background="#FF4F4F4F" Foreground="White" Click="Btn_multiple_Click" Grid.Row="3" Grid.Column="5"/>
+        <Button x:Name="btn_divide" Content="/" Margin="5" FontSize="20" Background="#FF4F4F4F" Foreground="White" Click="Btn_divide_Click" Grid.Row="2" Grid.Column="5"/>
+        <Button x:Name="btn_minus" Content="-" Margin="5" FontSize="20" Background="#FF4F4F4F" Foreground="White" Click="Btn_minus_Click" Grid.Row="5" Grid.Column="5" RenderTransformOrigin="0.303,0.494"/>
+        <Button x:Name="btn_cosine" Content="Cos" Margin="5" FontSize="20" Background="#FF4F4F4F" Foreground="White" Grid.Row="2" Click="Btn_cosine_Click" Grid.Column="1"/>
+        <Button x:Name="btn_Sinus" Content="Sin" Margin="5" FontSize="20" Background="#FF4F4F4F" Foreground="White" Grid.Row="3" Click="Btn_Sinus_Click" Grid.Column="1"/>
+        <Button x:Name="btn_Tangent" Content="Tan" Margin="5" FontSize="20" Background="#FF4F4F4F" Foreground="White" Grid.Row="4" Click="Btn_Tangent_Click" Grid.Column="1"/>
+        <Button x:Name="btn_Logarithm" Content="Log" Margin="5" FontSize="20" Background="#FF4F4F4F" Foreground="White" Grid.Row="2" Click="Btn_Logarithm_Click" RenderTransformOrigin="-0.062,0.402"/>
+        <Button x:Name="btn_Factorial" Content="n!" Margin="5" FontSize="20" Background="#FF4F4F4F" Foreground="White" Grid.Row="3" Click="Btn_Factorial_Click"/>
+        <Button x:Name="btn_Radical" Content="√" Margin="5" FontSize="20" Background="#FF4F4F4F" Foreground="White" Grid.Row="4" Click="Btn_Radical_Click" RenderTransformOrigin="0,0.5"/>
+        <Button x:Name="btn_negpos" Content="+/-" Margin="5" FontSize="20" Background="#FF4F4F4F" Foreground="White" Grid.Row="5" Grid.Column="1" Click="Btn_negpos_Click"/>
+
+    </Grid>
+</Window>
